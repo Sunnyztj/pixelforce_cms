@@ -1,0 +1,1 @@
+require "pixelforce_cms/version"
