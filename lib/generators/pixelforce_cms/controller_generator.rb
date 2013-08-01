@@ -7,8 +7,8 @@ module PixelforceCms
       argument :controller_name, type: :string
 
       def create_controller
-        template "base_controller.rb", "app/controller/admin/base_controller.rb"
-        template "admin_controller.rb", "app/controller/admin/#{file_name.pluralize}_controller.rb"
+        template "base_controller.rb", "app/controllers/admin/base_controller.rb"
+        template "admin_controller.rb", "app/controllers/admin/#{file_name.pluralize}_controller.rb"
       end
 
       def create_route
