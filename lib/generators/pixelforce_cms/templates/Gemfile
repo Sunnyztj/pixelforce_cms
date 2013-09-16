@@ -1,0 +1,81 @@
+source 'https://rubygems.org'
+
+gem 'rails', '3.2.14'
+
+# Bundle edge Rails instead:
+# gem 'rails', :git => 'git://github.com/rails/rails.git'
+
+gem 'mysql2'
+
+gem 'devise',      '~> 2.0'
+gem 'simple_form', '~> 2.0'
+gem 'paperclip'
+
+# SEO pack
+gem 'meta-tags', :require => 'meta_tags'
+
+# exception handle
+gem 'exception_notification'
+
+# pixelforce template
+gem 'pixelforce_cms', git: 'git@github.com:BenZhang/pixelforce_cms.git'
+
+# Gems used only for assets and not required
+# in production environments by default.
+group :assets do
+  gem 'sass-rails',   '~> 3.2.3'
+  gem 'coffee-rails', '~> 3.2.1'
+
+  # See https://github.com/sstephenson/execjs#readme for more supported runtimes
+  # gem 'therubyracer', :platforms => :ruby
+
+  gem 'uglifier', '>= 1.0.3'
+
+  #HTML5
+  gem 'compass-rails'
+  gem 'compass-h5bp'
+  gem 'uglifier', '>= 1.0.3'
+
+  #Bootstrap
+  gem "therubyracer"
+  gem "less-rails" #Sprockets (what Rails 3.1 uses for its asset pipeline) supports LESS
+  gem 'font-awesome-sass-rails'
+  gem 'anjlab-bootstrap-rails', :require => 'bootstrap-rails',
+                                :github => 'anjlab/bootstrap-rails'
+end
+
+gem 'jquery-rails'
+
+group :development, :test do
+  gem 'quiet_assets'
+  gem 'rspec'
+  gem 'rspec-rails',       '~> 2.13'
+  # Deploy with Capistrano
+  gem 'capistrano'
+  gem 'rvm-capistrano'
+  gem 'factory_girl_rails'
+  gem 'thin'
+  gem 'mocha'
+end
+
+gem 'sass'
+gem 'html5-rails'
+gem 'jquery-rails'
+
+gem 'haml', '~> 4.0.0'
+gem 'haml-rails', '~> 0.4'
+
+# To use ActiveModel has_secure_password
+# gem 'bcrypt-ruby', '~> 3.0.0'
+
+# To use Jbuilder templates for JSON
+# gem 'jbuilder'
+
+# Use unicorn as the app server
+# gem 'unicorn'
+
+# Deploy with Capistrano
+# gem 'capistrano'
+
+# To use debugger
+# gem 'debugger'
