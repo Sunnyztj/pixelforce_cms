@@ -1,5 +1,7 @@
-class Admin::BaseController < ApplicationController
-  before_filter :authenticate_user!
+class PagesController < ApplicationController
 
+  def index
+    
+  end
 
 end

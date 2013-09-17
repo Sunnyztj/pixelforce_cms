@@ -3,8 +3,6 @@
 @include h5bp-normalize;
 @include h5bp-main;
 @import "application/chromeframe";
-@import "application/document";
-@import "application/media_queries"; // Media queries last
 @include h5bp-helpers;
 @include h5bp-media;
 

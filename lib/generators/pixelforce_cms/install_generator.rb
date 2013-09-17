@@ -22,6 +22,14 @@ module PixelforceCms
         copy_file "Gemfile", 'Gemfile'
       end
 
+      def copy_controller_files
+        copy_file "application.html.haml", 'app/views/layouts/application.html.haml'
+        create_file 'app/views/pages/index.html.haml'
+        in_root do
+          inject_into_file 'config/routes.rb', "\n  root :to => 'pages#index'\n", { :after => 'do', :verbose => false }
+        end
+      end
+
       def config_application
         email_config = %q(
     config.action_mailer.delivery_method = :smtp
