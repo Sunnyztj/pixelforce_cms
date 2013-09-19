@@ -1,0 +1,8 @@
+- set_meta_tags title: ' Edit <%= controller_name.camelize %>'
+
+%section{id: '<%= controller_name.underscore %>'}
+  .widget
+    .widget-header
+      %h1 Edit <%= controller_name.camelize %>
+    .widget-content
+      = render 'form'
