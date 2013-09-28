@@ -23,9 +23,11 @@ module PixelforceCms
       end
 
       def copy_controller_files
-        copy_file "pages_controller.rb", 'app/controllers/pages_controller.rb'
-        copy_file "application.html.haml", 'app/views/layouts/application.html.haml'
+        copy_file   "pages_controller.rb", 'app/controllers/pages_controller.rb'
+        copy_file   "application.html.haml", 'app/views/layouts/application.html.haml'
+        copy_file   'Capfile', 'Capfile'
         create_file 'app/views/pages/index.html.haml'
+        template    'deploy.rb', 'config/deploy.rb'
         in_root do
           inject_into_file 'config/routes.rb', "\n  root :to => 'pages#index'\n", { :after => 'do', :verbose => false }
           inject_into_file 'config/routes.rb', "\n  get '/:id' => 'pages#show'\n", { :after => 'do', :verbose => false }
