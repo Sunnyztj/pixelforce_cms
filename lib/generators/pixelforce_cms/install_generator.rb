@@ -7,12 +7,15 @@ module PixelforceCms
 
       def copy_assets
         copy_file "javascripts/application.js", "app/assets/javascripts/application.js"
-        copy_file "css/application.css", "app/assets/stylesheets/application.css"
-        copy_file "css/_variables.css.scss", "vendor/assets/stylesheets/_variables.css.scss"
         copy_file "css/style.css.scss", 'vendor/assets/stylesheets/style.css.scss'
         copy_file "css/style.responsive.css.scss", 'vendor/assets/stylesheets/style.responsive.css.scss'
+        copy_file "css/application/application.css", "app/assets/stylesheets/application/application.css"
         copy_file "css/application/chromeframe.css.scss", 'vendor/assets/stylesheets/application/chromeframe.css.scss'
+        copy_file "css/application/document.css.scss", 'vendor/assets/stylesheets/application/document.css.scss'
         copy_file "css/application/html5.css.scss", 'vendor/assets/stylesheets/application/html5.css.scss'
+        copy_file "css/application/index.css.scss", 'vendor/assets/stylesheets/application/index.css.scss'
+        copy_file "css/application/variables.css.scss", "vendor/assets/stylesheets/application/variables.css.scss"
+        copy_file "css/pages/home.css.scss", "vendor/assets/stylesheets/pages/home.css.scss"
       end
 
       def copy_gemfile

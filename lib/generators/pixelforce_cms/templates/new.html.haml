@@ -1,8 +1,8 @@
-- set_meta_tags title: ' New <%= controller_name.singularize.camelize %>'
+- set_meta_tags title: ' New <%= @controller_name.singularize.camelize %>'
 
-%section{id: '<%= controller_name.singularize.underscore %>'}
+%section{id: '<%= @controller_name.singularize.underscore %>'}
   .widget
     .widget-header
-      %h1 New <%= controller_name.singularize.camelize %>
+      %h1 New <%= @controller_name.singularize.camelize %>
     .widget-content
       = render 'form'

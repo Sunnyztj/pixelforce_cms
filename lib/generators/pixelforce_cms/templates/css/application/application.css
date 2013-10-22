@@ -12,6 +12,6 @@
  *= require application/chromeframe
  *= require twitter/bootstrap
  *= require _font-awesome
-
- *= require style
+ *= require jquery.ui.all 
+ *= require fancybox
  */

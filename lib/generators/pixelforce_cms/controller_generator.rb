@@ -7,11 +7,13 @@ module PixelforceCms
       argument :controller_name, type: :string
 
       def create_controller
+        @controller_name = controller_name
         template "base_controller.rb", "app/controllers/admin/base_controller.rb"
         template "admin_controller.rb", "app/controllers/admin/#{file_name.pluralize}_controller.rb"
       end
 
       def create_views
+        @controller_name = controller_name
         # template 'index.html.haml', "app/views/admin/#{file_name}/index.html.haml"
         template 'new.html.haml', "app/views/admin/#{file_name}/new.html.haml"
         template 'edit.html.haml', "app/views/admin/#{file_name}/edit.html.haml"

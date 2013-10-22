@@ -18,7 +18,8 @@ gem 'meta-tags', :require => 'meta_tags'
 gem 'exception_notification'
 
 # pixelforce template
-gem 'pixelforce_cms', git: 'git@github.com:BenZhang/pixelforce_cms.git'
+gem 'pixelforce_cms', '~> 0.7'
+# gem 'pixelforce_cms', path: '/Users/ben/workspace/pixelforce_cms'
 
 # Gems used only for assets and not required
 # in production environments by default.
@@ -40,6 +41,9 @@ group :assets do
   gem 'font-awesome-sass-rails'
   gem 'anjlab-bootstrap-rails', :require => 'bootstrap-rails',
                                 :github => 'anjlab/bootstrap-rails'
+  
+  gem 'jquery-ui-rails'         
+  gem 'fancybox2-rails', '~> 0.2.4'                       
 end
 
 gem 'jquery-rails'
