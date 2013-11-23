@@ -13,6 +13,8 @@ set :rails_env,   'production'
 set :migrate_env, 'production'
 set :use_sudo, false
 set :deploy_via, :remote_cache
+set :db_local_clean, true
+set :locals_rails_env, "development"
 
 # server "<%= @application_name %>.com.au", :app, :web, :db, :primary => true
 server "119.9.13.249", :app, :web, :db, :primary => true

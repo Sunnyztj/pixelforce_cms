@@ -55,9 +55,9 @@ group :development, :test do
   # Deploy with Capistrano
   gem 'capistrano'
   gem 'rvm-capistrano'
+  gem "capistrano-db-tasks", require: false, github: 'gkopylov/capistrano-db-tasks', ref: 'f3949cd'
   gem 'factory_girl_rails'
   gem 'thin'
-  gem 'mocha'
 end
 
 gem 'sass'
