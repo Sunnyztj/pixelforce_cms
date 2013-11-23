@@ -1,0 +1,23 @@
+%head
+  %meta{:charset => 'UTF-8'}
+  %meta{:content => "IE=edge,chrome=1", "http-equiv" => "X-UA-Compatible"}
+  = display_meta_tags site: 'Sitename',
+                      keywords: '',
+                      description: 'Website description',
+                      separator: '|',
+                      reverse: true
+
+  %meta{content: "PixelForce Systems", :name => "author"}
+  %meta{:content => "Copyright Sitename #{Date.today.year}. All Rights Reserved.", :name => "Copyright"}
+
+  %meta{:content => "width=640", :name => "viewport"}
+  %link{:href => "/favicon.ico", :rel => "shortcut icon"}
+
+  = render 'stylesheets'
+  = javascript_include_tag 'polyfills'
+
+  = csrf_meta_tag
+
+  /[if lt IE 9]
+    <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+

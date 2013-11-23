@@ -7,15 +7,15 @@ module PixelforceCms
 
       def copy_assets
         copy_file "javascripts/application.js", "app/assets/javascripts/application.js"
-        copy_file "css/style.css.scss", 'vendor/assets/stylesheets/style.css.scss'
-        copy_file "css/style.responsive.css.scss", 'vendor/assets/stylesheets/style.responsive.css.scss'
+        copy_file "css/style.css.scss", 'app/assets/stylesheets/style.css.scss'
+        copy_file "css/style.responsive.css.scss", 'app/assets/stylesheets/style.responsive.css.scss'
         copy_file "css/application/application.css", "app/assets/stylesheets/application/application.css"
-        copy_file "css/application/chromeframe.css.scss", 'vendor/assets/stylesheets/application/chromeframe.css.scss'
-        copy_file "css/application/document.css.scss", 'vendor/assets/stylesheets/application/document.css.scss'
-        copy_file "css/application/html5.css.scss", 'vendor/assets/stylesheets/application/html5.css.scss'
-        copy_file "css/application/index.css.scss", 'vendor/assets/stylesheets/application/index.css.scss'
-        copy_file "css/application/variables.css.scss", "vendor/assets/stylesheets/application/variables.css.scss"
-        copy_file "css/pages/home.css.scss", "vendor/assets/stylesheets/pages/home.css.scss"
+        copy_file "css/application/chromeframe.css.scss", 'app/assets/stylesheets/application/chromeframe.css.scss'
+        copy_file "css/application/document.css.scss", 'app/assets/stylesheets/application/document.css.scss'
+        copy_file "css/application/html5.css.scss", 'app/assets/stylesheets/application/html5.css.scss'
+        copy_file "css/application/index.css.scss", 'app/assets/stylesheets/application/index.css.scss'
+        copy_file "css/application/variables.css.scss", "app/assets/stylesheets/application/variables.css.scss"
+        copy_file "css/pages/home.css.scss", "app/assets/stylesheets/pages/home.css.scss"
       end
 
       def copy_gemfile
@@ -25,7 +25,12 @@ module PixelforceCms
       def copy_controller_files
         copy_file   "pages_controller.rb", 'app/controllers/pages_controller.rb'
         copy_file   "application.html.haml", 'app/views/layouts/application.html.haml'
+        copy_file   "application/_chromeframe.html.haml", 'app/views/application/_chromeframe.html.haml'
+        copy_file   "application/_footer.html.haml", 'app/views/application/_footer.html.haml'
+        copy_file   "application/_head.html.haml", 'app/views/application/_head.html.haml'
+        copy_file   "application/_header.html.haml", 'app/views/application/_header.html.haml'
         copy_file   'Capfile', 'Capfile'
+        remove_file 'app/views/layouts/application.html.erb'
         create_file 'app/views/pages/index.html.haml'
         @application_name = application_name
         template    'deploy.rb', 'config/deploy.rb'
