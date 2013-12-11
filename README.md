@@ -22,6 +22,7 @@ Generate templates
     $ rails g pixelforce_cms:install
 
 
+
 TODO: Write usage instructions here
 
 ## Contributing
