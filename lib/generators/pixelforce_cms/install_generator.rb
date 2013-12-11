@@ -22,6 +22,13 @@ module PixelforceCms
         copy_file "Gemfile", 'Gemfile'
       end
 
+      def copy_receipt
+        copy_file "recipes/base.rb", "config/recipes/base.rb"
+        copy_file "recipes/unicorn.rb", "config/recipes/unicorn.rb"
+        copy_file "recipes/templates/nginx_config.erb", "config/recipes/templates/nginx_config.erb"
+        copy_file "recipes/templates/unicorn_init.erb", "config/recipes/templates/unicorn_init.erb"
+      end
+
       def copy_controller_files
         copy_file   "pages_controller.rb", 'app/controllers/pages_controller.rb'
         copy_file   "application.html.haml", 'app/views/layouts/application.html.haml'
