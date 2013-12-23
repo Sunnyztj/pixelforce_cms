@@ -19,6 +19,7 @@ Or install it yourself as:
 ## Usage
 
 Generate templates
+
     $ rails g pixelforce_cms:install
 
 
