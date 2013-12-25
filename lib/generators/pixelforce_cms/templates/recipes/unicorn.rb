@@ -16,7 +16,7 @@ namespace :unicorn do
   %w[start stop restart].each do |command|
     desc "#{command} unicorn"
     task command, roles: :web do
-      run "#{sudo} service #{application} #{command}"
+      run "/etc/init.d/#{application} #{command}"
     end
   end
 end

@@ -5,6 +5,7 @@ require "rvm/capistrano"
 load "config/recipes/base"
 load "config/recipes/unicorn"
 
+default_run_options[:pty] = true
 set :application, '<%= @application_name %>'
 set :repository,  'git@bisplug.com:<%= @application_name %>.git'
 set :scm, :git
@@ -21,7 +22,6 @@ set :locals_rails_env, "development"
 set :server_address, "<%= @application_name %>.pixelforcesystems.com.au"
 
 # server "<%= @application_name %>.com.au", :app, :web, :db, :primary => true
-server "119.9.13.249", :app, :web, :db, :primary => true
 
 # if you want to clean up old releases on each deploy uncomment this:
 after "deploy:restart", "deploy:cleanup"
