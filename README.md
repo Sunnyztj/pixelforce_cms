@@ -2,6 +2,10 @@
 
 TODO: Write a gem description
 
+## Create a new project
+
+    rails new [name] _3.2.16_ -d mysql
+
 ## Installation
 
 Add this line to your application's Gemfile:
@@ -22,9 +26,13 @@ Generate templates
 
     $ rails g pixelforce_cms:install
 
+There are 3 options you can customise, assets, controllers, and config. For example if you don't want to generate config settings you can
 
+    $ rails g pixelforce_cms:install --skip-config
 
-TODO: Write usage instructions here
+Add a new admin controller
+
+    $ rails g pixelforce_cms:controller [name]
 
 ## Contributing
 
