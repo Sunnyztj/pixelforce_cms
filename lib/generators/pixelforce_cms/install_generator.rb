@@ -26,8 +26,10 @@ module PixelforceCms
       def copy_receipt
         copy_file "recipes/base.rb", "config/recipes/base.rb"
         copy_file "recipes/unicorn.rb", "config/recipes/unicorn.rb"
+        copy_file "recipes/sphinx.rb", "config/recipes/sphinx.rb"
         copy_file "recipes/templates/nginx_config.erb", "config/recipes/templates/nginx_config.erb"
         copy_file "recipes/templates/unicorn_init.erb", "config/recipes/templates/unicorn_init.erb"
+        copy_file "recipes/templates/sphinx_init.erb", "config/recipes/templates/sphinx_init.erb"
       end
 
       def copy_controller_files
