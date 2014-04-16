@@ -38,15 +38,11 @@ group :assets do
   #Bootstrap
   gem "therubyracer"
   gem "less-rails" #Sprockets (what Rails 3.1 uses for its asset pipeline) supports LESS
-  gem 'font-awesome-sass-rails'
-  gem 'anjlab-bootstrap-rails', :require => 'bootstrap-rails',
-                                :github => 'anjlab/bootstrap-rails'
+  gem 'bootstrap-sass', '~> 3.0.3.0'
   
   gem 'jquery-ui-rails'         
   gem 'fancybox2-rails', '~> 0.2.4'                       
 end
-
-gem 'jquery-rails'
 
 group :development, :test do
   gem 'quiet_assets'
@@ -60,6 +56,7 @@ group :development, :test do
   gem 'thin'
 end
 
+gem "font-awesome-rails"
 gem 'sass'
 gem 'html5-rails'
 gem 'jquery-rails'

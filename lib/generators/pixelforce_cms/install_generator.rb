@@ -11,6 +11,7 @@ module PixelforceCms
       def copy_assets
         if options.assets?
           copy_file "javascripts/application.js", "app/assets/javascripts/application.js"
+          copy_file "javascripts/respond.js", "vendor/assets/javascripts/respond.js"
           copy_file "css/style.css.scss", 'app/assets/stylesheets/style.css.scss'
           copy_file "css/style.responsive.css.scss", 'app/assets/stylesheets/style.responsive.css.scss'
           copy_file "css/application/application.css", "app/assets/stylesheets/application/application.css"

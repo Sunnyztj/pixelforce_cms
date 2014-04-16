@@ -8,17 +8,32 @@
 //----------------------------------------------
 // Html5 Boilerplate overrides
 //----------------------------------------------
-$font-family: 'Roboto', sans-serif;
+$font-heading: "Helvetica Neue", Helvetica, Arial, sans-serif;
+$font-body: "Helvetica Neue", Helvetica, Arial, sans-serif;
 
-$background-color: #f2f1e6;
-$font-color: #222;
-$link-color: #949591;
-$link-hover-color: #949591;
+$font-color: #333;
+$link-color: #0e3c5d;
+
+$font-highlight-color: #e32a29;
 
 $white: #fff;
-$gray: #808285;
-$light-gray: #dfdfdf;
+$gray: #999;
+$light-gray: #e5e5e5;
+$dark-gray: #333;
 
-$placeholder: #ddd;
+$red: #e32a29;
+$blue: #0e3c5d;
+$orange: #ffa200;
+$green: #70da65;
 
-$gutter: 15px;
+$radius: 8px;
+$gutter: 20px;
+$min-width: 0;
+
+
+//----------------------------------------------
+// Bootstrap overrides
+//----------------------------------------------
+
+$btn-danger-bg: $red;
+$btn-primary-bg: $blue;
