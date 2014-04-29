@@ -21,6 +21,8 @@ module PixelforceCms
           copy_file "css/application/index.css.scss", 'app/assets/stylesheets/application/index.css.scss'
           copy_file "css/application/variables.css.scss", "app/assets/stylesheets/application/variables.css.scss"
           copy_file "css/pages/home.css.scss", "app/assets/stylesheets/pages/home.css.scss"
+          remove_file "app/assets/stylesheets/application.css"
+          create_file "app/assets/javascripts/layouts.js"
         end
       end
 
@@ -46,10 +48,6 @@ module PixelforceCms
           create_file 'app/views/pages/index.html.haml'
           @application_name = application_name
           template    'deploy.rb', 'config/deploy.rb'
-          in_root do
-            inject_into_file 'config/routes.rb', "\n  root :to => 'pages#index'\n", { :after => 'do', :verbose => false }
-            inject_into_file 'config/routes.rb', "\n  get '/:id' => 'pages#show'\n", { :after => 'do', :verbose => false }
-          end
         end
       end
 

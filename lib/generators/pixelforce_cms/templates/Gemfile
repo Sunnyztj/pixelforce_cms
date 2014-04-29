@@ -18,7 +18,7 @@ gem 'meta-tags', :require => 'meta_tags'
 gem 'exception_notification'
 
 # pixelforce template
-gem 'pixelforce_cms', '~> 0.7'
+gem 'pixelforce_cms', '~> 0.9.8'
 # gem 'pixelforce_cms', path: '/Users/ben/workspace/pixelforce_cms'
 
 # Gems used only for assets and not required
