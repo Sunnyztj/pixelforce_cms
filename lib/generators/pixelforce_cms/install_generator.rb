@@ -26,7 +26,7 @@ module PixelforceCms
         end
       end
 
-      def copy_receipt
+      def copy_receipt        
         copy_file "recipes/base.rb", "config/recipes/base.rb"
         copy_file "recipes/unicorn.rb", "config/recipes/unicorn.rb"
         copy_file "recipes/sphinx.rb", "config/recipes/sphinx.rb"
@@ -48,6 +48,7 @@ module PixelforceCms
           create_file 'app/views/pages/index.html.haml'
           @application_name = application_name
           template    'deploy.rb', 'config/deploy.rb'
+          template    'unicorn.rb', 'config/unicorn.rb'
         end
       end
 
