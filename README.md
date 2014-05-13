@@ -30,6 +30,10 @@ There are 3 options you can customise, assets, controllers, and config. For exam
 
     $ rails g pixelforce_cms:install --skip-config
 
+Add contact us module
+
+    $ rails g pixelforce_cms:contact_us
+
 Add a new admin controller
 
     $ rails g pixelforce_cms:controller [name]
