@@ -7,7 +7,7 @@ class ContactsController < ApplicationController
   def create
     @contact_us = ContactUs.new params[:contact_us]
     if @contact_us.save
-      redirect_to contacts_path
+      redirect_to contact_path
     else
       render action: :new
     end
