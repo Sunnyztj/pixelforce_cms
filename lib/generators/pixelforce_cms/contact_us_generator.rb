@@ -8,7 +8,7 @@ module PixelforceCms
       def create_model
         copy_file "contact_us.rb", "app/models/contact_us.rb"
         copy_file "contacts_controller.rb", "app/controllers/contacts_controller.rb"
-        template  "notification.rb", 'app/emailers/notification.rb'
+        template  "notification.rb", 'app/mailers/notification.rb'
         create_file "app/views/notification/notify_us.text.haml"
         route_config = %q(
   get  '/contact', to: 'contacts#new', as: :conatct
