@@ -4,7 +4,7 @@ TODO: Write a gem description
 
 ## Create a new project
 
-    rails _3.2.16_ new [name] -d mysql
+    rails _3.2.17_ new [name] -d mysql
 
 ## Installation
 
