@@ -22,7 +22,7 @@ module PixelforceCms
           copy_file "css/application/variables.css.scss", "app/assets/stylesheets/application/variables.css.scss"
           copy_file "css/pages/home.css.scss", "app/assets/stylesheets/pages/home.css.scss"
           remove_file "app/assets/stylesheets/application.css"
-          create_file "app/assets/javascripts/layouts.js"
+          create_file "app/assets/javascripts/layout.js"
         end
       end
 
