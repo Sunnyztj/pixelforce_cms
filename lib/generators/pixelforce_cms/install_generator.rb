@@ -52,6 +52,10 @@ module PixelforceCms
         end
       end
 
+      def copy_model_files
+        copy_file "pretty_url.rb", "app/models/concerns/pretty_url.rb"
+      end
+
       def config_application
         if options.config?
           copy_file "Gemfile", 'Gemfile'
