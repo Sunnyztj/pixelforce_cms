@@ -4,6 +4,7 @@ require "rvm/capistrano"
 
 load "config/recipes/base"
 load "config/recipes/unicorn"
+load "config/recipes/delayed_job"
 
 default_run_options[:pty] = true
 set :application, '<%= @application_name %>'
