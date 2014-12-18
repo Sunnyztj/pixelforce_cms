@@ -6,7 +6,7 @@ listen '/tmp/<%= @application_name %>.sock', :backlog => 2048
 listen 5001, :tcp_nopush => true
 
 timeout 60
-pid "/home/deploy/<%= @application_name %>/shared/pids/unicorn.pid"
+pid "/home/deploy/<%= @application_name %>/shared/pids/<%= @application_name %>.pid"
 preload_app  true
 GC.respond_to?(:copy_on_write_friendly=) and
   GC.copy_on_write_friendly = true

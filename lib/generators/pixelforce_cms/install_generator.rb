@@ -34,6 +34,7 @@ module PixelforceCms
         copy_file "recipes/templates/nginx_config.erb", "config/recipes/templates/nginx_config.erb"
         copy_file "recipes/templates/unicorn_init.erb", "config/recipes/templates/unicorn_init.erb"
         copy_file "recipes/templates/sphinx_init.erb", "config/recipes/templates/sphinx_init.erb"
+        copy_file "recipes/templates/monit_delayed_config.erb", "config/recipes/templates/monit_delayed_config.erb"
         copy_file "recipes/templates/delayed_job_init.erb", "config/recipes/templates/delayed_job_init.erb"
       end
 
