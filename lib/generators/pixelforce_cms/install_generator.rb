@@ -57,6 +57,7 @@ module PixelforceCms
 
       def copy_model_files
         copy_file "pretty_url.rb", "app/models/concerns/pretty_url.rb"
+        copy_file "double.rb", "app/models/double.rb"
       end
 
       def config_application
