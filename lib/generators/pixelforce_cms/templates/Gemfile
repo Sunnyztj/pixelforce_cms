@@ -51,8 +51,7 @@ gem 'au_state_select', '~> 1.1'
 #ancestry
 gem 'ancestry'
 
-group :test do
-  gem 'rspec'
+group :development, :test do
   gem 'rspec-rails', '~> 3.0'
   gem 'simplecov'
   gem "factory_girl_rails", "~> 4.0"
