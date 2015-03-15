@@ -9,7 +9,6 @@ namespace :unicorn do
     run "#{sudo} update-rc.d #{application} defaults"
     template "nginx_config.erb", "/tmp/nginx_config"
     run "#{sudo} mv /tmp/nginx_config /etc/nginx/sites-enabled/#{application}"
-    run "#{sudo} rm -f /etc/nginx/sites-enabled/default"
   end
   # after "deploy:setup", "nginx:setup"
   
