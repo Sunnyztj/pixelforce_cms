@@ -8,7 +8,7 @@ load "config/recipes/delayed_job"
 
 default_run_options[:pty] = true
 set :application, '<%= @application_name %>'
-set :repository,  'git@bisplug.com:<%= @application_name %>.git'
+set :repository,  'git@git.pixelforcesystems.com.au:<%= @application_name %>.git'
 set :scm, :git
 
 set :deploy_to,   '/home/deploy/<%= @application_name %>'
