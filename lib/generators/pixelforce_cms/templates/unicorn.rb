@@ -3,7 +3,6 @@ worker_processes 2
 working_directory '/home/deploy/<%= @application_name %>/current'
 
 listen '/tmp/<%= @application_name %>.sock', :backlog => 2048
-listen 5001, :tcp_nopush => true
 
 timeout 60
 pid "/home/deploy/<%= @application_name %>/shared/pids/<%= @application_name %>.pid"

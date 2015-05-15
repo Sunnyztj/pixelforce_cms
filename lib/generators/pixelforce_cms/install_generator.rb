@@ -50,8 +50,10 @@ module PixelforceCms
           remove_file 'app/views/layouts/application.html.erb'
           create_file 'app/views/pages/index.html.haml'
           @application_name = application_name
-          template    'deploy.rb', 'config/deploy.rb'
-          template    'unicorn.rb', 'config/unicorn.rb'
+          template    'deploy.rb',     'config/deploy.rb'
+          template    'staging.rb',    'config/deploy/staging.rb'
+          template    'production.rb', 'config/deploy/production.rb'
+          template    'unicorn.rb',    'config/unicorn.rb'
         end
       end
 
