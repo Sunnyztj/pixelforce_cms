@@ -13,7 +13,7 @@
 USER="deploy"
 DAEMON=unicorn
 PROJECT_PATH="<%= deploy_to %>"
-DAEMON_OPTS="-c $PROJECT_PATH/current/config/unicorn.rb -E production -D"
+DAEMON_OPTS="-c $PROJECT_PATH/current/config/unicorn.rb -E <%= rails_env %> -D"
 NAME=unicorn
 DESC="Unicorn app for $USER"
 PID="$PROJECT_PATH/shared/pids/unicorn.pid"
