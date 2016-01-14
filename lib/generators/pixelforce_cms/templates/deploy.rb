@@ -8,7 +8,7 @@ load "config/recipes/delayed_job"
 
 default_run_options[:pty] = true
 set :application, '<%= @application_name %>'
-set :repository,  'git@bisplug.com:<%= @application_name %>.git'
+set :repository,  'git@bitbucket.org:<%= @application_name %>.git'
 set :scm, :git
 
 set :deploy_to,   '/home/deploy/<%= @application_name %>'
@@ -20,7 +20,7 @@ set :use_sudo, false
 set :deploy_via, :remote_cache
 set :db_local_clean, true
 set :locals_rails_env, "development"
-set :server_address, "<%= @application_name %>.pixelforcesystems.com.au"
+set :server_address, "<%= @application_name %>.tmatt.com.au"
 
 # server "<%= @application_name %>.com.au", :app, :web, :db, :primary => true
 
