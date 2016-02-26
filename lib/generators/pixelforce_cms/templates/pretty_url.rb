@@ -20,6 +20,16 @@ module PrettyUrl
     url_name
   end
 
+  module ClassMethods
+    def find(*args)
+      if args.first.is_a?(String)
+        record = find_by_url_name(args.first)
+        return record if record.present?
+      end
+      super(args)
+    end
+  end
+
   private
   def update_url_name
     self.url_name = "#{name.to_url}-#{id}" if name_changed? and !url_name_changed?    
