@@ -2,9 +2,9 @@ set :branch,      'develop'
 set :rails_env,   'staging'
 set :migrate_env, 'staging'
 
-set :server_address, "<%= @application_name %>.pixelforcesystems.com.au"
+set :server_address, "<%= @application_name %>.tmatt.com.au"
 
-server "<%= @application_name %>.pixelforcesystems.com.au", :app, :web, :db, :primary => true
+server "<%= @application_name %>.tmatt.com.au", :app, :web, :db, :primary => true
 
 # If you are using Passenger mod_rails uncomment this:
 namespace :deploy do

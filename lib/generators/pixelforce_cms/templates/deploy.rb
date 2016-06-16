@@ -25,13 +25,13 @@ set :server_address, "<%= @application_name %>.tmatt.com.au"
 after "deploy:restart", "deploy:cleanup"
 after 'deploy:restart', 'unicorn:restart'
 
- # -after 'deploy:restart', 'unicorn:restart'
- # -
- # -# If you are using Passenger mod_rails uncomment this:
- # -namespace :deploy do
- # -  task :start do ; end
- # -  task :stop do ; end
- # -  task :restart, :roles => :app, :except => { :no_release => true } do
- # -    run "cd '/home/deploy/<%= @application_name %>/current' ; bundle exec rake db:migrate db:seed RAILS_ENV=production"
- # -  end
- # -end
+ after 'deploy:restart', 'unicorn:restart'
+ 
+ # If you are using Passenger mod_rails uncomment this:
+ namespace :deploy do
+   task :start do ; end
+   task :stop do ; end
+   task :restart, :roles => :app, :except => { :no_release => true } do
+     run "cd '/home/deploy/<%= @application_name %>/current' ; bundle exec rake db:drop db:create db:migrate db:seed RAILS_ENV=production"
+   end
+ end
